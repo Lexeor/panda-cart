@@ -32,8 +32,8 @@ export default function Order(props) {
         <div className="order-details">
             <div className="entities">
                 <b>Order №{props.order.id}</b>
-                <b>Поставщик</b><span>{props.order.supplier.name}</span><br />
-                <b>Покупатель</b><span>{props.order.contractor.name}</span><br />
+                <span className="footer-label">Поставщик</span><span>{props.order.supplier.name}</span>
+                <span className="footer-label">Покупатель</span><span>{props.order.contractor.name}</span>
             </div>
             <div className="delivery-details">
                 <p><span>Комментарий</span><textarea name="Text1" rows="2" defaultValue={props.order.comment} onClick={handleClick}/></p>
@@ -96,38 +96,39 @@ export default function Order(props) {
                         <option value="cont-2">#2</option>
                     </select>
                 </div>
+                <div className="footer-item">
+                    <b>Итого по заказу</b>
+                    
+                    <div className="totals-row">
+                        <span className="footer-subtotal">Итого</span>
+                        <span className="footer-value" style={{float:"right"}}>{props.currency.sign}5547</span>
+                    </div>
+                    <div className="totals-row">
+                        <span className="footer-label">Скидки</span>
+                        <span className="footer-total-value">(20%) - {props.currency.sign}1109.40</span>
+                    </div>
+                    <div className="totals-row">
+                        <span className="footer-label">Предоплата</span>
+                        <span className="footer-total-value">(50%) - {props.currency.sign}2218.8</span>
+                    </div>
+                    <div className="divider-dashed"></div>
+                    <div className="totals-row">
+                        <span>Сумма к оплате</span>
+                        <span className="footer-grandtotal-value">{props.currency.sign}2218.8</span>
+                    </div>
+                    <div className="totals-row vat">
+                        <span className="footer-label">В том числе НДС</span>
+                        <span className="footer-total-value">{props.currency.sign}443.76</span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div className="divider"></div>
-        <div className="order-summary">
-            <div className="totals">
-                <b>Итого по заказу</b>
-                
-                <div className="totals-row">
-                    <span className="footer-subtotal">Итого</span>
-                    <span className="footer-value" style={{float:"right"}}>{props.currency.sign}5547</span>
-                </div>
-                <div className="totals-row">
-                    <span className="footer-label">Скидки</span>
-                    <span className="footer-total-value">(20%) - {props.currency.sign}1109.40</span>
-                </div>
-                <div className="totals-row">
-                    <span className="footer-label">Предоплата</span>
-                    <span className="footer-total-value">(50%) - {props.currency.sign}2218.8</span>
-                </div>
-                <div className="divider-dashed"></div>
-                <div className="totals-row">
-                    <span>Сумма к оплате</span>
-                    <span className="footer-grandtotal-value">{props.currency.sign}2218.8</span>
-                </div>
-                <div className="totals-row vat">
-                    <span className="footer-label">В том числе НДС</span>
-                    <span className="footer-total-value">{props.currency.sign}443.76</span>
-                </div>
-                <div className="divider"></div>
-                <input type="button" class="remove-button" value="Очистить корзину"></input>
-                <input type="button" class="approve-button" value="Оформить заказ"></input>
-            </div>
+        <div className="order-actions">
+            {/* Order actions */}
+            <div className="divider"></div>
+            <input type="button" class="button-archive" value="Переместить в черновики"></input>
+            <input type="button" class="button-remove" value="Очистить корзину"></input>
+            <input type="button" class="button-approve" value="Оформить заказ"></input>
         </div>
     </div>
   )

@@ -53,8 +53,15 @@ input, textarea {
   flex-direction: row;
 }
 
-.entities {
+.order-actions {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
 
+.entities {
+  display: flex;
+  flex-direction: column;
 }
 
 .delivery-details {
@@ -77,20 +84,6 @@ input, textarea {
 
 .btn--add-product:hover {
   background-color: rgb(240, 240, 240);
-}
-
-.btn--delete-order {
-  border: 1px solid red;
-  background-color: white;
-  width: 120px;
-  border-radius: 3px;
-  padding: 6px;
-  font-size: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  cursor: pointer;
 }
 
 .divider {
@@ -216,7 +209,7 @@ td, th {
 }
 
 .footer-item {
-  width: 34%;
+  width: 25%;
   margin-bottom: 15px;
 }
 

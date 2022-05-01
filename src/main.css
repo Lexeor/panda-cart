@@ -36,22 +36,33 @@ html, body {
     border: 0;
 }
 
-.remove-button {
+.button-remove {
     border: 1px solid #d72503;
+    background-color: transparent;
     color: #d72503;
     padding: 10px;
     border-radius: 5px;
-    background-color: transparent;
     margin-right: 10px;
+    margin-left: auto;
     cursor: pointer;
 }
 
-.approve-button {
+.button-approve {
     border: 1px solid #1fae51;
     background-color: #1fae51;
     color: white;
     padding: 10px;
     border-radius: 5px;
     float: right;
+    cursor: pointer;
+}
+
+.button-archive {
+    border: 1px solid rgb(165, 165, 165);
+    background-color: rgb(165, 165, 165);;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
     cursor: pointer;
 }

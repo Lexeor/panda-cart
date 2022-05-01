@@ -30,8 +30,28 @@ html, body {
     background-color: #EFEFEF;
 }
 
-.gray-botton {
+.gray-button {
     padding: 10px;
     border-radius: 5px;
     border: 0;
+}
+
+.remove-button {
+    border: 1px solid #d72503;
+    color: #d72503;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.approve-button {
+    border: 1px solid #1fae51;
+    background-color: #1fae51;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    float: right;
+    cursor: pointer;
 }

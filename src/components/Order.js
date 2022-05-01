@@ -31,6 +31,7 @@ export default function Order(props) {
     <div className="order-container">
         <div className="order-details">
             <div className="entities">
+                <b>Order №{props.order.id}</b>
                 <b>Поставщик</b><span>{props.order.supplier.name}</span><br />
                 <b>Покупатель</b><span>{props.order.contractor.name}</span><br />
             </div>
@@ -44,38 +45,88 @@ export default function Order(props) {
         <div className="btn--add-product noselect"><Plus size={16} color="black" />Добавить товар</div>
         <div className="divider"></div>
         <div className="order-footer">
-            {/* Filters section */}
-            <div className="filters">
-                Filters
+            {/* Footer section */}
+            <div className="order-footer">
+                <div className="footer-item">
+                    <b>Платёж</b>
+                    <div className="footer-label">Тип оплаты</div>
+                    <select id="cars" className="cart-select" name="payment-type" >
+                        <option value="foot">Предоплата</option>
+                        <option value="auto">Постоплата</option>
+                    </select>
+
+                    <div className="footer-label">Способ оплаты</div>
+                    <select id="cars" className="cart-select" name="delivery" >
+                        <option value="foot">Наличные</option>
+                        <option value="auto">Перевод</option>
+                        <option value="train">Банк</option>
+                        <option value="avia">Пожертвование</option>
+                        <option value="teleport">Мы тебя не уничтожим и не переиграем.</option>
+                    </select>
+
+                    <div className="footer-label">Процент предоплаты</div>
+                    <input value="50" className="cart-select"></input>
+
+                    <div className="footer-label">Отсрочка платежа (дни)</div>
+                    <input value="0" className="cart-select"></input>
+                </div>
+                <div className="footer-item">
+                    <b>Поставка</b>
+                    <div className="footer-label">Способ поставки</div>
+                    <select id="cars" className="cart-select" name="delivery" >
+                        <option value="foot">Пеший курьер</option>
+                        <option value="auto">Авто</option>
+                        <option value="train">Ж/Д</option>
+                        <option value="avia">Авиа</option>
+                        <option value="teleport">Телепортация</option>
+                    </select>
+                    <div className="footer-label">Желаемая дата отгрузки</div>
+                    <input value="Тут datapicker, сейчас лень :)" className="cart-select"></input>
+                </div>
+                <div className="footer-item">
+                    <b>Детали</b>
+                    <div className="footer-label">Грузополучатель</div>
+                    <select id="cars" className="cart-select" name="receiver" >
+                        <option value="res-1">ООО "Ололоша"</option>
+                        <option value="res-2">ПАО "Молодость"</option>
+                    </select>
+                    <div className="footer-label">Договор</div>
+                    <select id="cars" className="cart-select" name="contract" >
+                        <option value="cont-1">#1</option>
+                        <option value="cont-2">#2</option>
+                    </select>
+                </div>
             </div>
-            {/* Totals section */}
+        </div>
+        <div className="divider"></div>
+        <div className="order-summary">
             <div className="totals">
+                <b>Итого по заказу</b>
+                
                 <div className="totals-row">
-                    <span className="span-text">Итого</span>
-                    <span className="span-currency">{props.currency.sign}</span>
-                    {countTotals().total}
+                    <span className="footer-subtotal">Итого</span>
+                    <span className="footer-value" style={{float:"right"}}>{props.currency.sign}5547</span>
                 </div>
                 <div className="totals-row">
-                    <span className="span-text green">Скидки</span>
-                    <span className="span-currency">{props.currency.sign}</span>
-                    {countTotals().discount}
+                    <span className="footer-label">Скидки</span>
+                    <span className="footer-total-value">(20%) - {props.currency.sign}1109.40</span>
                 </div>
                 <div className="totals-row">
-                    <span className="span-text">Общий итог</span>
-                    <span className="span-currency">{props.currency.sign}</span>
-                    {countTotals().grandTotal}
+                    <span className="footer-label">Предоплата</span>
+                    <span className="footer-total-value">(50%) - {props.currency.sign}2218.8</span>
                 </div>
+                <div className="divider-dashed"></div>
                 <div className="totals-row">
-                    <span className="span-text">Предоплата <span className="span-persent">{countTotals().prepaymentPercent}%</span></span>
-                    <span className="span-currency">{props.currency.sign}</span>
-                    
-                    {countTotals().prepayment}
+                    <span>Сумма к оплате</span>
+                    <span className="footer-grandtotal-value">{props.currency.sign}2218.8</span>
                 </div>
-                <div className="totals-row">
-                    <span className="span-text">Сумма оплаты</span>
-                    <span className="span-currency">{props.currency.sign}</span>
-                    {countTotals().toPay}
+                <div className="totals-row vat">
+                    <span className="footer-label">В том числе НДС</span>
+                    <span className="footer-total-value">{props.currency.sign}443.76</span>
                 </div>
+                <div className="divider"></div>
+                <input type="button" class="remove-button" value="Очистить корзину"></input>
+                <input type="button" class="approve-button" value="Оформить заказ"></input>
             </div>
         </div>
     </div>

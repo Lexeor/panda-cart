@@ -79,10 +79,30 @@ input, textarea {
   background-color: rgb(240, 240, 240);
 }
 
+.btn--delete-order {
+  border: 1px solid red;
+  background-color: white;
+  width: 120px;
+  border-radius: 3px;
+  padding: 6px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
 .divider {
   border-bottom: 1px solid #e6e6e6;
   margin-bottom: 15px;
   height: 15px;
+}
+
+.divider-dashed {
+  border-bottom: 1px dashed #e6e6e6;
+  margin-bottom: 10px;
+  height: 10px;
 }
 
 .order-footer {
@@ -93,6 +113,7 @@ input, textarea {
 .totals {
   margin-left: auto;
   margin-bottom: 15px;
+  max-width: 34%;
 }
 
 /* Table */
@@ -150,18 +171,14 @@ td, th {
 }
 
 .totals-row {
-  font-size: 12px;
-  padding: 5px;
-  border: 1px solid #e6e6e6;
+  padding: 5px 0;
   margin-bottom: -1px;
+  margin-top: 5px;
 }
 
-.totals-row:first-child {
-  border-radius: 5px 5px 0 0;
-}
-
-.totals-row:last-child {
-  border-radius: 0 0 5px 5px;
+.vat {
+  margin-top: 0;
+  font-size: 0.9em;
 }
 
 .span-text {
@@ -189,6 +206,60 @@ td, th {
 
 .green {
   color: #86c46a;
+}
+
+.order-footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.footer-item {
+  width: 34%;
+  margin-bottom: 15px;
+}
+
+.footer-label {
+  color: #929292;
+  font-size: 0.8em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.footer-value {
+  color: #424242;
+}
+
+.footer-subtotal {
+  color: #424242;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+  font-weight: 500;
+}
+
+.footer-total-value {
+  color: #929292;
+  float: right;
+}
+
+.footer-grandtotal-value {
+  float: right;
+  font-weight: bold;
+}
+
+.cart-select {
+  width:90%;
+  min-width: 15ch;
+  max-width: 30ch;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  padding: 0.25em 0.5em;
+  font-size: 1em;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: #fff;
+  margin-left: -0.6em;
 }
 
 /* Modal */

@@ -20,7 +20,7 @@ export default function App() {
     <div className="App">
       <OrderList data={rawData}/>
       <div className="cart-container">
-        <div className="warning">Внимание, цены в корзине пересчитываются бла-бла-бла...</div>
+        {/* <div className="warning">Внимание, цены в корзине пересчитываются бла-бла-бла...</div> */}
         <div className="page-title">Корзина</div>
         <div className="orders-container">
           {orderItems}

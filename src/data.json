@@ -91,20 +91,36 @@
         "pay_type": null,
         "consignee": null,
         "items": [
-            {
-              "id": 4,
-              "code": "896574",
-              "name": "Koska Yaz Helvasi",
-              "properties": "",
-              "count": 1,
-              "full_count": 10,
-              "measure_unit": "шт",
-              "volume": 10,
-              "weight": 1,
-              "weight_gross": 2,
-              "price": 10,
-              "sum": 10
-            }
+          {
+            "id": 3,
+            "code": "485425",
+            "name": "Ништяки",
+            "properties": "",
+            "category": "Еда",
+            "count": 1,
+            "full_count": 10,
+            "measure_unit": "шт",
+            "volume": 10,
+            "weight": 1,
+            "weight_gross": 2,
+            "price": 10,
+            "sum": 10
+          },
+          {
+            "id": 3,
+            "code": "485425",
+            "name": "НИкаких ништяков, только хардкор (300г)",
+            "properties": "",
+            "category": "Хардкор",
+            "count": 1,
+            "full_count": 10,
+            "measure_unit": "шт",
+            "volume": 10,
+            "weight": 1,
+            "weight_gross": 2,
+            "price": 10,
+            "sum": 10
+          }
           ],
           "total": 6256.83
       }

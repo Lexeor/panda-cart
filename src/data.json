@@ -1,0 +1,112 @@
+{
+  "type": "cart",
+  "currency": {
+    "name": "EUR",
+    "sign": "€"
+  },
+  "orders": [
+      {
+        "id": 1,
+        "comment": "Some comment here!! or empty string",
+        "delivery_address": "Some address or empty string",
+        "agreement": null,
+        "contractor": {
+          "id": 1,
+          "name": "Azazai"
+        },
+        "supplier": {
+          "id": 1,
+          "name": "Ozozoi"
+        },
+        "transport_company": null,
+        "delivery_point": null,
+        "pay_method": null,
+        "pay_type": null,
+        "consignee": null,
+        "items": [
+            {
+              "id": 1,
+              "code": "896574",
+              "name": "Супер мега товар 1",
+              "properties": "",
+              "category": "Еда",
+              "count": 1,
+              "full_count": 10,
+              "measure_unit": "шт",
+              "volume": 10,
+              "weight": 1,
+              "weight_gross": 2,
+              "price": 10,
+              "sum": 10
+            },
+            {
+              "id": 2,
+              "code": "123632",
+              "name": "Мега товар 2",
+              "properties": "",
+              "category": "Вода",
+              "count": 1,
+              "full_count": 10,
+              "measure_unit": "шт",
+              "volume": 10,
+              "weight": 1,
+              "weight_gross": 2,
+              "price": 10,
+              "sum": 10
+            },
+            {
+              "id": 3,
+              "code": "485425",
+              "name": "Супер товар 3",
+              "properties": "",
+              "category": "Кое-что из бытовой техники",
+              "count": 1,
+              "full_count": 10,
+              "measure_unit": "шт",
+              "volume": 10,
+              "weight": 1,
+              "weight_gross": 2,
+              "price": 10,
+              "sum": 10
+            }
+          ],
+        "total": 256.17
+      },
+      {
+        "id": 2,
+        "comment": "! or empty string Some comment here!",
+        "delivery_address": "Some address or empty string",
+        "agreement": null,
+        "contractor": {
+          "id": 2,
+          "name": "Lololai"
+        },
+        "supplier": {
+          "id": 2,
+          "name": "Walaloi"
+        },
+        "transport_company": null,
+        "delivery_point": null,
+        "pay_method": null,
+        "pay_type": null,
+        "consignee": null,
+        "items": [
+            {
+              "id": 4,
+              "code": "896574",
+              "name": "Koska Yaz Helvasi",
+              "properties": "",
+              "count": 1,
+              "full_count": 10,
+              "measure_unit": "шт",
+              "volume": 10,
+              "weight": 1,
+              "weight_gross": 2,
+              "price": 10,
+              "sum": 10
+            }
+          ],
+          "total": 6256.83
+      }
+    ]
+}

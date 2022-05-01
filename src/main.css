@@ -1,0 +1,37 @@
+html, body {
+    background-color: #282c34;
+    padding: 0;
+    margin: 0;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.order-list {
+    width: 200px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+}
+
+.order-list--item {
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.order-list--item:hover {
+    background-color: #EFEFEF;
+}
+
+.gray-botton {
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+}
